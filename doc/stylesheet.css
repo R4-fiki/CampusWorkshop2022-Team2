@@ -1,0 +1,345 @@
+:root{
+    --navbar-background-color: #095683;
+    --navbar-separator-color: #058f55;
+    --navbar-icin-color:#058f55;
+    --navbar-transition-speed: .2s;
+    --primary-color:#0aad92;
+    --navbar-logo-background-color:#e2dfe4;
+}
+
+#contenue{
+    display: flexbox;
+}
+
+
+
+#Logo-DC{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px; 
+    width:400px;
+}
+
+
+/*Partenaire*/
+
+
+#Partenaire{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    background-color: #d3d3d3;
+}
+
+.container {
+    justify-content: center;
+    display: inline-block;
+    position: relative;
+    width: 200px;
+}
+
+.container .text {
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    position: absolute;
+    text-align: left;
+    font-family: Georgia;
+    margin: 0 auto;
+    left: 0;
+    right: auto;
+    top: 0%;
+    color: white;
+    width: 60%;
+}
+
+#Partenaire-box{
+    width: 300px;
+    overflow: hidden;
+    border: 2px solid #4d4c4c;
+}
+
+.partenaire-Logo{
+    display: flex;
+    animation-duration: 15s;
+    animation-name: NosPartenaires;
+    animation-iteration-count: infinite;
+    height: 200px;
+    width: 200px;
+}
+
+@keyframes NosPartenaires {
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-300px);
+    }
+    50%{
+        transform: translateX(-600px);
+    }
+    75%{
+        transform: translateX(-900px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+
+
+/*Contenue*/
+
+
+#Page{
+    margin: 0;
+    font-family: 'Source sans Pro';
+    font-size: 16px;
+}
+
+main{
+    padding: 1rem 4rem;
+    margin-left: 5rem;
+    text-align: center;
+}
+
+.ordoner{
+    text-align: left;
+}
+
+
+
+/*PORTEFOLIO*/
+
+#portefolio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    background-color: #d3d3d3;
+}
+
+.portefolio-aligne {
+    justify-content: center;
+    display: inline-block;
+    position: relative;
+    width: 200px;
+}
+
+.portefolio-aligne .nomProjets {
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    position: absolute;
+    text-align: left;
+    font-family: Georgia;
+    margin: 0 auto;
+    left: 0;
+    right: auto;
+    top: 0%;
+    color: white;
+    width: 60%;
+}
+
+
+#Projets-box{
+    width: 300px;
+    overflow: hidden;
+    border: 2px solid #4d4c4c;
+}
+
+.Projets-image{
+    display: flex;
+    animation-duration: 30s;
+    animation-name: NosProjets;
+    animation-iteration-count: infinite;
+    height: 250px;
+    width: 250px;
+}
+
+@keyframes NosProjets {
+    0%{
+        transform: translateX(25);
+    }
+    25%{
+        transform: translateX(-500px);
+    }
+    50%{
+        transform: translateX(-925px);
+    }
+    75%{
+        transform: translateX(-1375px);
+    }
+    100%{
+        transform: translateX(25);
+    }
+}
+
+/*FORMULAIRE*/
+
+
+#Email{
+    text-align: left;
+}
+
+#message{
+    text-align: left;
+}
+
+#News{
+    text-align: left;
+}
+#files{
+    text-align: left;
+}
+
+/*FOOTER*/
+
+footer {
+	margin-bottom: 0%;           /* Espacement avec le texte du dessus */
+	display: flex; 
+	flex-wrap: wrap; /* Allez à la ligne si besoin */
+	justify-content: space-around; /* Espace autour des éléments */
+	background-color: #000;
+	color: white;
+	padding: 10px;
+	text-decoration: none;
+}
+
+/*NAV BAR*/
+
+
+#pins{
+    align-items: center;
+    height: 40px;
+    width:85px;
+}
+
+.navbar {
+    width: 5rem;
+    position: fixed;
+    top: 0px;
+    left:0px;
+    bottom: 0px;
+    background-color: var(--navbar-background-color);
+    box-shadow: #686868 3px 1px;
+    transition: width var(--navbar-transition-speed) ease;
+}
+
+.navbar-menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar-item{
+    width: 100%;
+    border-bottom: solid 1px var(--navbar-separator-color);
+}
+
+.navbar-link{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 5rem;
+    width: 100%;
+    text-decoration: none;
+}
+
+.navbar-icon{
+    text-align: center;
+    font-size: 1,5rem;
+    min-width: 2rem;
+    margin: 0 1.5rem;
+    color:var(--navbar-icon-color);
+}
+
+.navbar-item:hover .navbar-icon{
+    color:var( --primary-color)
+}
+
+.navbar:hover{
+    width: 15rem;
+}
+
+.navbar:not(:hover) .navbar-title{
+    display: none;
+}
+
+.logo{
+    background:var(--navbar-logo-background-color) ;
+}
+
+.logo .navbar-title{
+    color: #0aad92;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 1.5rem;
+}
+
+.navbar:hover .logo .navbar-icon {
+    transform:rotate(180deg);
+}
+
+
+
+
+
+/*rendu responmsive*/
+
+
+
+
+
+@media only screen and (max-width:1024px) {
+  .navbar {
+    top:0;
+    bottom: auto;
+    width:100%;
+ 
+  }
+
+  .navbar:hover {
+    width:100%;
+  }
+
+  .navbar-menu {
+    flex-direction: row;
+  }
+
+  main {
+    margin-left:0;
+    margin-bottom:5rem;
+  }
+
+  #arrow{
+    transform:rotate(90deg);
+}
+
+  .navbar:hover .logo #arrow {
+    transform:rotate(-90deg);
+}
+
+  .navbar-icon {
+    min-width:auto;
+    margin:0;
+  }
+
+  .navbar-link {
+    justify-content: center;
+  }
+
+  #Logo-DC{
+      display: none;
+  }
+
+  header{
+      height: 5rem;
+  }
+
+}
